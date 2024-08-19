@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { PaginaPrincipal } from "./PaginaPrincipal";
-import { About } from "./About";
-import { Calendario } from "./Calendario";
-import { Trabajo } from "./Trabajo";
-import { Error404 } from "./Error404";
-
+import { PaginaPrincipal } from "./PaginaPrincipal/PaginaPrincipal";
+import { About } from "./About/About";
+import { Calendario } from "./Calendario/Calendario";
+import { Trabajo } from "./Trabajo/Trabajo";
+import { Error404 } from "./Error404/Error404";
+import { Navbar } from "./Navbar/Navbar";
 function App() {
   return (
     <>
       <BrowserRouter>
-        <p>Barra de Navegacion</p>
+        {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<PaginaPrincipal />}></Route>
           <Route path="/about/" element={<About />}></Route>

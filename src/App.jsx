@@ -5,17 +5,22 @@ import { Calendario } from "./Calendario/Calendario";
 import { Trabajo } from "./Trabajo/Trabajo";
 import { Error404 } from "./Error404/Error404";
 import { Navbar } from "./Navbar/Navbar";
+import { Event } from "./Event/Event";
+
+import "./font.css"
 function App() {
   return (
     <>
       <BrowserRouter>
-        {/* <Navbar /> */}
+        <Navbar />
         <Routes>
           <Route path="/" element={<PaginaPrincipal />}></Route>
           <Route path="/about/" element={<About />}></Route>
           <Route path="/calendario/" element={<Calendario />}></Route>
           <Route path="/trabajo/:numero/:dificultad" element={<Trabajo />}></Route>
+          <Route path="/Event/:id" element={<Event />}></Route>
           <Route path="*" element={<Error404 />}></Route>
+          
         </Routes>
         
       </BrowserRouter>

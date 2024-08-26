@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import "./Calendario.css";
-import { useEffect } from "react";
-function Calendario() {
+import { Calendar } from "../Calendar/Calendar";
+import { useEffect, useState } from "react";
+export function Calendario() {
 
   const [estado1, setEstado1] = useState(null)
 
 
-  const search = useLocation();
-  console.log(search);
-  const params = Object.fromEntries(new URLSearchParams(search.search));
-  console.log(params);
+  // const search = useLocation();
+  // console.log(search);
+  // const params = Object.fromEntries(new URLSearchParams(search.search));
+  // console.log(params);
 
 
 useEffect(() =>{
@@ -24,13 +25,10 @@ useEffect(() =>{
     <>
     <button onClick={() => setEstado1(100)}> {estado1}</button>
       <h1 className="clase-buena">este es mi calendario</h1>
-      <table>
-        <caption>mes de {params.mes}</caption>
-        
-      </table>
+      <Calendar/>
       <Link to="/">ir a la pagina pricipal</Link>
     </>
   );
 }
 
-export { Calendario };
+
